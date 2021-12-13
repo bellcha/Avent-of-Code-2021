@@ -5,7 +5,7 @@ increase = 0
 
 for i in range(len(data_input)):
     if data_input[i] > data_input[i - 1]:
-        print (f'{data_input[i]} Increase')
+        print (f'{data_input[i]} Increase over {data_input[i - 1]}')
         increase += 1
 
 print(increase)
