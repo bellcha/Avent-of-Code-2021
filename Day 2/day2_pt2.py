@@ -6,21 +6,14 @@ def main(commands):
         if i[0] == 'forward':
             horizontal += int(i[1])
             depth += (aim * int(i[1]))
-            print(i)
-            print (f'horizontal:{horizontal}\ndepth: {depth} \naim:{aim}')
-            print('-'*10)
+
         elif i[0] == 'down':
             aim += int(i[1])
-            print(i)
-            print (f'horizontal:{horizontal}\ndepth: {depth}\naim:{aim}')
-            print('-'*10)
+
         elif i[0] == 'up':
             aim -= int(i[1])
-            print(i)
-            print (f'horizontal:{horizontal}\ndepth: {depth}\naim:{aim}')
-            print('-'*10)
-    print(f'Final Value: {(horizontal * depth)}')
 
+    print(f'Final Value: {(horizontal * depth)}')
 
 if __name__ == "__main__":
     with open ('input.txt', 'r') as f:
