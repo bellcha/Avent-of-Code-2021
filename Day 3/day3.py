@@ -7,11 +7,13 @@ def most_freq(List):
 def least_freq(List):
     return min(set(List), key=List.count)
 
-def gamma():
-    with open ('input.txt', 'r') as f:
+def diagnostic(input):
+    with open (input, 'r') as f:
         lines = f.read().splitlines()
     
-    final = []
+    final_most = []
+
+    final_least = []
 
     for x in range(len(lines[0])):
 
@@ -21,38 +23,18 @@ def gamma():
 
             test_line.append(line[x])            
             
-        final.append(most_freq(test_line))
+        final_most.append(most_freq(test_line))
+        final_least.append(least_freq(test_line))
     
-    return int(''.join(final), 2)
+    g = int(''.join(final_most), 2)
+    e = int(''.join(final_least), 2)
 
-def epsilon():
-
-    with open ('input.txt', 'r') as f:
-        lines = f.read().splitlines()
-    
-    final = []
-
-    for x in range(len(lines[0])):
-
-        test_line = []
-
-        for line in lines:
-
-            test_line.append(line[x])            
-            
-        final.append(least_freq(test_line))
-    
-    return int(''.join(final), 2)
+    return g * e
 
 
 def main():
-    
-    g = gamma()
 
-    e = epsilon()
-
-    print(g * e)
-
+    print(diagnostic('input.txt'))
 
 
 if __name__ == '__main__':
