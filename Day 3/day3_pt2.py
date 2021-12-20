@@ -4,7 +4,6 @@ def most_freq(List):
 
     ones = 0
     zeros = 0
-    print(List)
 
     for i in List:
         if i == '1':
@@ -22,7 +21,6 @@ def most_freq(List):
 def least_freq(List):
     ones = 0
     zeros = 0
-    print(List)
 
     for i in List:
         if i == '1':
